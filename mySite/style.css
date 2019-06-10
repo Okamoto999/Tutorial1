@@ -1,0 +1,369 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }  
+  header{
+    height:70px;
+    background-color: #ec715f;
+}
+.HeaderGroup{
+    text-align: center;
+    
+    margin-left:auto;
+    margin-right:auto;
+}
+header img{
+    float:left;
+    height: 70px;
+    width:auto;
+}
+.mainVisual{
+    width:100%;
+    
+    height:650px;
+    background-size: cover;
+    background-position:center;
+}
+.mainVisual h1,.mainVisual p{
+    color:#fafafa;
+    text-align: center;
+}
+.mainVisual h1{
+    padding-top:200px;
+    font-size: 64px;
+    margin-bottom:20px;
+}
+.mainVisual p{
+    font-size: 20px;
+}
+.backCover{
+    padding:90px 0;
+}
+.backCover:nth-child(odd){
+    background-color:#eceff1;
+}
+.portFolio{
+    text-align: center;
+    margin:0px auto;
+}
+.Theme{
+    display: inline-block;
+    text-align: center;
+    margin:0 auto 0 auto;
+    padding-bottom:8px;
+    font-size: 32px;
+    color:#000000;   
+}
+.portBorder{
+    text-align: center;
+    width:70px;
+    margin:0 auto 30px auto;
+    border-bottom:3px solid #ec715f;
+}
+.Theme2{
+    font-size:16px;
+    margin-bottom:30px;
+}
+.feature{
+    text-align: center;
+    margin:0 auto;
+    display:block;
+}
+.featureContents{
+    text-align: center;
+}
+.fab{
+    font-size:60px;
+}
+.featureContents h3{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size: 20px;
+    color:#000000;
+}
+.featureContents p{
+    text-align: left;
+    font-size:16px;
+    color:#000000;
+}
+.Profile{
+    text-align: center;
+    margin:0 auto;
+    display:block;
+}
+.profileIcon img{
+
+    width:250px;
+    height:250px;
+    border-radius:250px;
+}
+.profiles h3{
+    font-size:20px;
+    margin-bottom:5px;
+}
+.profiles p{
+    font-size:16px;
+    color:#000000;
+    margin-bottom:20px;
+}
+.ContactContents h3{
+    font-size:20px;
+    margin-bottom:5px;
+}
+.ContactContents p{
+    margin-bottom:20px;
+    text-decoration-line: underline;
+}
+.ContactContents i{
+    font-size:50px;
+}
+footer{
+    background-color:#ec715f;
+    height:60px;
+    text-align: center;
+    color:#fafafa;
+    line-height: 60px;
+    font-size: 16px;
+}
+
+@media screen and (min-width:768px){
+    .HeaderGroup{
+        width:1024px;
+    }
+    header nav{
+        float:right;
+    }
+    .menuTrigger{
+        display:none;
+    }
+    .menuBar{
+        display: block;
+    }
+    .menuBar li{
+        float:left;
+        font-size: 16px;
+        list-style: none;
+        padding:0 30px;
+        line-height: 70px;
+        color:#fafafa;
+        
+    }
+    .mainVisual{
+        background-image: url(img/mv.png);
+    }
+    .HeaderGroup,.portFolio,.feature,.Profile,.Contact{
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .portFolio{
+        text-align: center;
+        width:920px;
+        
+
+    } 
+    .PortPic{
+        height:250px;
+        margin-bottom:10px;
+        background-image: url(img/code.png);
+        background-size: cover;
+        background-position: center;
+        float:left;
+        width:300px;
+        height:250px;
+        margin-left:0px;
+        margin-right:10px;
+    }
+    .PortPic:nth-child(3n){
+        margin-right:0px;
+    }
+    .p11{
+        background-image:url(img/sketch.jpg);
+    }
+    .p12{
+        background-image:url(img/websuku.png);
+    }
+    .p13{
+        background-image:url(img/write.jpg);
+    }
+    .p14{
+        background-image:url(img/webcamp.png);
+    }
+    .p15{
+        background-image:url(img/talk.jpg);
+    }
+    .p16{
+        background-image:url(img/webcamp-mother.png);
+    }
+    .feature{
+        width:980px;
+       }
+    
+    .featureContents{
+        float:left;
+        width:320px;
+        height:auto;
+        margin-right:10px;
+    }
+    .featureContents:last-child{
+        margin-right:0px;
+    }
+    .Profile{
+        width:1024px;
+    }
+    .ProfileContentsCore{
+        margin-top:30px;
+        width:512px;
+        float: left;
+    }
+    .profiles{
+        text-align:left;
+    }   
+
+    
+    .Contact{
+        text-align: center;
+        width:800px;
+        margin:0 auto;
+        display:block;
+    
+    }
+    .ContactContents{
+        width:400px;
+        float:left;
+        text-align: left;
+    }
+    .ContactContentsSub{
+        text-align: center;
+        width:200px;
+        margin:0 auto;
+    }
+    .ContactContents h3,.ContactContents p,.ContactContents i{
+        text-align: left;
+    }
+    .ContactContents i{
+        margin-right:20px;
+    }
+
+    .ContactContents i:last-child{
+        margin-right:0px;
+    }
+    
+}
+@media screen and (max-width:768px){
+    header{
+        height:50px;
+    }
+    header img{
+        height: 50px;
+    }
+    .HeaderGroup{
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .menuTrigger{
+        float: right;
+        width:40px;
+        height:40px;
+        margin:5px;
+        border:2px solid white;
+        cursor:pointer;
+    }
+    .menuTrigger span{
+        display:block;
+        text-align: center;
+        height:3px;
+        width:20px;
+        margin-top:7px;
+        margin-left:auto;
+        margin-right:auto;
+        background-color: white;
+    }
+    .menuBar{
+        position:absolute;
+        width:100%;
+        top:50px;
+        left:0;
+        background-color:rgba(0,0,0,32);
+        border-top:3px solid white;
+        display: none;
+    }
+    .menuBar li{
+        line-height: 80px;
+        border-bottom:1px solid white;
+        color:white;
+    }
+    .mainVisual{
+        background-image: url(img/code.png);
+    }
+    .mainVisual h1{
+        font-size: 40px;
+    }
+    .mainVisual p{
+        font-size: 18px;
+    }
+    .p11,.p12,.p13{
+        height:250px;
+        margin-bottom:10px;
+        background-image: url(img/code.png);
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        height:300px;
+    }
+    .p11{
+        background-image:url(img/websuku.png);
+    }
+    .p12{
+        background-image:url(img/webcamp.png);
+    }
+    .p13{
+        background-image:url(img/webcamp-mother.png);
+    }
+
+    .PortPic:last-child{
+        margin-bottom:0px;
+    }
+    .portFolio,.feature,.Profile,.Contact{
+        text-align: center;
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+   .featureContents{
+       text-align: center;
+    }
+   .featureContents p{
+    margin-bottom:10px;
+    }
+    .profiles{
+        text-align: center;
+    }
+    .ProfileContentsCore{
+        margin-top:30px;
+        text-align: center;
+    }
+    .Core2{
+        margin-top:20px;
+    }
+
+    .ContactContents{
+        text-align: center;
+    }
+    .ContactContents h3,.ContactContents p,.ContactContents i{
+        text-align: center;
+    }
+    .ContactContents i{
+        margin-right:8px;
+    }
+}

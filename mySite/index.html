@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
+    <title>mySite</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.menuTrigger').click(function() {
+            if($('.HeaderGroup nav').hasClass('clearly')){
+                $('.HeaderGroup nav').removeClass('clearly');
+                $('.HeaderGroup nav').slideDown();
+
+            }else{
+                $('.HeaderGroup nav').addClass('clearly');
+                $('.HeaderGroup nav').slideUp();
+            }
+             });
+        });
+    </script>
+</head>
+<body>
+    <header class="clearfix">
+        <div class="HeaderGroup">
+                <img src="img/logo.png">
+                <div class="menuTrigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="menuBar clearly">
+                    <ul>
+                        <li>PortFolio</li>
+                        <li>Feature</li>
+                        <li>Profile</li>
+                        <li>Contact</li>
+                    </ul>            
+                </nav>
+        </div>
+        
+    </header>
+    <section class="mainVisual">
+        <h1>Lorem Ipsum</h1>
+        <p>simply dummy text of the printing</p>
+    </section>
+    <div class="backCover">
+            <section class="portFolio">
+                <h1 class="Theme">PortFolio</h1>
+                <div class="portBorder"></div>
+                <p class="Theme2">It is a long established fact that a reader will be distracted by the readable<br>content of a page when looking at its layout.<br>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+                <div class="PicGroup clearfix">
+                    <div class="PortPic p11"></div>
+                    <div class="PortPic p12"></div>
+                    <div class="PortPic p13"></div>
+                    <div class="PortPic p14"></div>
+                    <div class="PortPic p15"></div>
+                    <div class="PortPic p16"></div>
+                </div>
+            </section>
+    </div>
+    <div class="backCover">
+        <section class="feature">
+                <h1 class="Theme">Feature</h1>
+                <div class="portBorder"></div>
+                <p class="Theme2">It is a long established fact that a reader will be distracted by the readable<br>content of a page when looking at its layout.<br>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+                <div class="featureGroup clearfix">
+                    <div class="featureContents">
+                        <i class="fab fa-facebook-square"></i>
+                        <h3>Strength1</h3>
+                        <p>Contary to popular belief,Lorem Ipsum is not simply random text.It has roots in a piece of classical Latin litenature from 45 BC,making it over 2000 years old.Richard McClintock,a Latin proffesor at Hampden-Sydney College in Virginia,looked us one of the more obscure Latin words,consectetur</p>
+                    </div>
+                    <div class="featureContents">
+                        <i class="fab fa-facebook-square"></i>
+                        <h3>Strength2</h3>
+                        <p>Contary to popular belief,Lorem Ipsum is not simply random text.It has roots in a piece of classical Latin litenature from 45 BC,making it over 2000 years old.Richard McClintock,a Latin proffesor at Hampden-Sydney College in Virginia,looked us one of the more obscure Latin words,consectetur</p>
+                    </div>
+                    <div class="featureContents">
+                        <i class="fab fa-facebook-square"></i>
+                        <h3>Strength3</h3>
+                        <p>Contary to popular belief,Lorem Ipsum is not simply random text.It has roots in a piece of classical Latin litenature from 45 BC,making it over 2000 years old.Richard McClintock,a Latin proffesor at Hampden-Sydney College in Virginia,looked us one of the more obscure Latin words,consectetur</p>
+                    </div>
+                </div>
+            </section>       
+    </div>
+       <div class="backCover">
+            <section class="Profile">
+                <h1 class="Theme">Profile</h1>
+                <div class="portBorder"></div>
+                <p class="Theme2">It is a long established fact that a reader will be distracted by the readable<br>content of a page when looking at its layout.<br>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+                <div class="ProfileGroup clearfix">
+                    <div class="ProfileContentsCore">
+                        <div class="profileIcon">
+                            <img src="img/my-icon.jpg">
+                        </div>
+                    </div>
+                    <div class="ProfileContentsCore Core2">
+                        <div class="profiles">
+                            <h3>MyName</h3>
+                            <p>Contary to popular belief,Lorem Ipsum is not simply random text.It has roots in a piece of classical Latin litenature from 45 BC,making it over 2000 years old.Richard McClintock,a Latin proffesor at Hampden-Sydney College in Virginia,looked us one of the more obscure Latin words,consectetur</p>
+                        </div>
+                        <div class="profiles">
+                            <h3>MySkills</h3>
+                            <p>HTML/CSS/JavaScript/JQuery/PhotoShop</p>
+                        </div>
+                        </div>
+                </div>
+            </section>
+       </div>
+       <div class="backCover">
+           <section class="Contact clearfix">
+               <h1 class="Theme">Contact</h1>
+               <div class="portBorder"></div>
+               <p class="Theme2">It is a long established fact that a reader will be distracted by the readable<br>content of a page when looking at its layout.<br>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+               <div class="ContactContents">
+                   <div class="ContactContentsSub">
+                        <h3>Mail</h3>
+                        <p>xxx@xxx.com</p>
+                        <h3>Tell</h3>
+                        <p>000-0000-0000</p>
+                   </div>
+                  
+               </div>
+               <div class="ContactContents">
+                   <div class="ContactContentsSub">
+                        <h3>SNS</h3>
+                        <div class="iconGroup">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-instagram"></i>
+                        </div>
+                   </div> 
+                </div>
+            </section>
+       </div>
+       <footer>
+           <p>©2017 WebCamp</p>
+       </footer>
+</body>
+</html>
