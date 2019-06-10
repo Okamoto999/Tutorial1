@@ -1,60 +1,84 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 .clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
+  content: "";
+  display: block;
+  clear: both;
+}
+.MainContentsGroup{
+  text-align: center;
+  margin:50px auto;
+}
+.MainContents{
+  text-align: left;
+  float: left;
+  padding:10px;
+  border:1px solid lightgray;
+  position:relative;
+}
+.Picture{
+  padding:10px;
+  background-size: cover;
+  background-position: center;
+}
+.p1{
+  background-image: url(img/flow01.png);
+}
+.p2{
+  background-image: url(img/flow02.png);
+}
+.p3{
+  background-image: url(img/flow03.png);
+}
+.special{
+  background-color: orange;
+  padding:3px;
+  color:white;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.MainContents h3{
+  margin:15px 0 5px;
+}
+@media screen and (min-width:400px){
   .MainContentsGroup{
-    text-align: center;
-    width:960px;
-    margin:50px auto;
-
+    width:90%;
   }
   .MainContents{
-    text-align: left;
-    float: left;
-    width:300px;
-    padding:10px;
-    margin-right:30px;
-    border:1px solid lightgray;
-    position:relative;
+    margin-bottom: 20px;
+  }
+  .Picture{
+    height:150px;
   }
   .MainContents:last-child{
-    margin-right: 0px;
+    margin-bottom:0px;
   }
-  
-  .Picture{
-    width:280px;
-    height:150px;
-    padding:10px;
-    background-size: cover;
-    background-position: center;
+}
+ @media screen and (min-width:769px){
+   .MainContentsGroup{
+      width:960px;
+   }
+   .MainContents{
+     width:300px;
+     margin-right:30px;
+   }
+    
+    .MainContents:last-child{
+      margin-right: 0px;
+    }
+    .Picture{
+      width:280px;
+      height:150px;
+    }
+   
+    .MainContents h3,.MainContents p{
+      width:280px;
+    }
+
   }
-  .p1{
-    background-image: url(img/flow01.png);
-  }
-  .p2{
-    background-image: url(img/flow02.png);
-  }
-  .p3{
-    background-image: url(img/flow03.png);
-  }
-  .special{
-    background-color: orange;
-    padding:3px;
-    color:white;
-    position: absolute;
-    top:0;
-    left:0;
-  }
-  .MainContents h3,.MainContents p{
-    width:280px;
-  }
-  .MainContents h3{
-    margin:15px 0 5px;
-  }
+
   
