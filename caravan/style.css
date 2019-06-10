@@ -8,21 +8,47 @@
     display: block;
     clear: both;
   }
-  .back{
-    width:100%;
-    height:200px;
-    background-size:cover;
-    background-position:center;
-  }
-  .b1{
-    background-image:url("img/box1.jpg");
-  }
-  .b2{
-    background-image:url("img/box2.jpg");
-  }
-  .b3{
-    background-image:url("img/box3.jpg");
-  }
-  .b4{
-    background-image:url("img/box4.jpg");
-  }
+body{
+  text-align: center;
+  width:960px;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+.MainGroup{
+  margin:50px auto;
+}
+.typeA p{
+  text-align:left;
+  padding:20px;
+  color:gray;
+  
+}
+.typeA:nth-child(odd){
+  background-color:#eeeeee;
+}
+.typeA:nth-child(even){
+  background-color:lightgray;
+}
+
+.typeB{
+  width:30%;
+  height:200px;
+  margin-right:5%;
+  background-color:yellow;
+  float:left;
+  margin-bottom:40px;
+}
+.typeB:nth-child(3n){
+  margin-right: 0%
+}
+.typeB:nth-last-child(-n+3){
+  margin-bottom:0;
+}
+.typeB:first-child,.typeB:nth-child(5),.typeB:last-child{
+  background-color: orange;
+}
+.typeBGroup{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
