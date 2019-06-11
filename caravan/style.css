@@ -44,7 +44,7 @@
 .MainContents h3{
   margin:15px 0 5px;
 }
-@media screen and (min-width:400px){
+@media screen and (max-width:768px){
   .MainContentsGroup{
     width:90%;
   }
@@ -52,13 +52,16 @@
     margin-bottom: 20px;
   }
   .Picture{
+    text-align: center;
+    width:90%;
+    margin: 0 auto;
     height:150px;
   }
   .MainContents:last-child{
     margin-bottom:0px;
   }
 }
- @media screen and (min-width:769px){
+ @media screen and (min-width:768px){
    .MainContentsGroup{
       width:960px;
    }
