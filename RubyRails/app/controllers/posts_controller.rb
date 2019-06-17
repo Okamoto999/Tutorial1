@@ -13,6 +13,12 @@ class PostsController < ApplicationController
       # 新規投稿画面へリダイレクト
       redirect_to '/posts/new'
   end
+  def index
+    @posts=Post.all
+  end
+  def show
+    @post=Post.find(params[:id])
+  end
 
   private
  
