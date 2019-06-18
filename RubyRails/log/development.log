@@ -1591,3 +1591,718 @@ Started GET "/attachments/07c5128b62a9c0cd959f5c27f723514e90aeaedf/store/fill/30
 Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Refile::App: [2019-06-18 13:47:16 +0000] GET "/07c5128b62a9c0cd959f5c27f723514e90aeaedf/store/fill/300/300/638e31c9c01220ff2ee5bab270bba412e80311b60a7faa8a5ff45063f7cf/image.jpeg" 200 118.3ms
 
+Started GET "/posts/1" for 10.0.2.2 at 2019-06-18 14:03:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 727ms (Views: 664.3ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/posts/1" for 10.0.2.2 at 2019-06-18 14:03:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7q9xox4fDpTBBiTqBaMqHOiatv93EQvZqpDMDaPZTtQfyXwOFa82br5Pee6yW7bnL9vqShncziSkubBgu2EEVQ==", "id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[36mPost Destroy (2.8ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 11.6ms)
+
+
+  
+NameError (undefined local variable or method `redirect_to_posts_path' for #<PostsController:0x00007fee2405eed8>):
+  
+app/controllers/posts_controller.rb:27:in `destroy'
+Started DELETE "/posts/1" for 10.0.2.2 at 2019-06-18 14:04:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7q9xox4fDpTBBiTqBaMqHOiatv93EQvZqpDMDaPZTtQfyXwOFa82br5Pee6yW7bnL9vqShncziSkubBgu2EEVQ==", "id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+Completed 404 Not Found in 20ms (ActiveRecord: 3.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1):
+  
+app/controllers/posts_controller.rb:25:in `destroy'
+Started GET "/posts/1" for 10.0.2.2 at 2019-06-18 14:04:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 404 Not Found in 5ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1):
+  
+app/controllers/posts_controller.rb:14:in `show'
+Started GET "/posts/1" for 10.0.2.2 at 2019-06-18 14:05:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 404 Not Found in 17ms (ActiveRecord: 2.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1):
+  
+app/controllers/posts_controller.rb:14:in `show'
+Started GET "/posts" for 10.0.2.2 at 2019-06-18 14:05:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/RubyRails/app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...post.title ,post_path(post.id));@output_buffer.safe_append='...
+...                              ^
+/vagrant/RubyRails/app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 10.0.2.2 at 2019-06-18 14:06:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1" for 10.0.2.2 at 2019-06-18 14:07:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 404 Not Found in 5ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1):
+  
+app/controllers/posts_controller.rb:14:in `show'
+Started GET "/posts/2" for 10.0.2.2 at 2019-06-18 14:07:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 405ms (Views: 371.4ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/posts/2" for 10.0.2.2 at 2019-06-18 14:07:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/vrplegdwtCgvkNNRyTjUOu4Wkj2THr0dbAmsHwbYk4PnOQ44636Kt/3Hknw3H+rLPkG/ZiBvwl7mVrdZKMozw==", "id"=>"2"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[36mPost Destroy (10.7ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 21.4ms)
+
+
+  
+NameError (undefined local variable or method `redirect_to　post_path' for #<PostsController:0x00007ff9ad3dfa28>):
+  
+app/controllers/posts_controller.rb:27:in `destroy'
+Started DELETE "/posts/2" for 10.0.2.2 at 2019-06-18 14:08:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/vrplegdwtCgvkNNRyTjUOu4Wkj2THr0dbAmsHwbYk4PnOQ44636Kt/3Hknw3H+rLPkG/ZiBvwl7mVrdZKMozw==", "id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+Completed 404 Not Found in 22ms (ActiveRecord: 2.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=2):
+  
+app/controllers/posts_controller.rb:25:in `destroy'
+Started GET "/posts" for 10.0.2.2 at 2019-06-18 14:08:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/RubyRails/app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...post.title ,post_path(post.id));@output_buffer.safe_append='...
+...                              ^
+/vagrant/RubyRails/app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/posts/3" for 10.0.2.2 at 2019-06-18 14:08:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 394ms (Views: 373.8ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/posts/3" for 10.0.2.2 at 2019-06-18 14:08:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VO8LSLDmKn00I68bEZuFzCM3qZX0idMIAunD8HFAyJCliQblu1YSh0tq8h+mYxk35Hb1IJpEFvUMwL+dafiCEQ==", "id"=>"3"}
+  [1m[36mPost Load (15.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[36mPost Destroy (10.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 36.5ms)
+
+
+  
+NameError (undefined local variable or method `redirect_to　posts_path' for #<PostsController:0x00007f575c203b08>):
+  
+app/controllers/posts_controller.rb:27:in `destroy'
+Started GET "/posts" for 10.0.2.2 at 2019-06-18 14:09:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/RubyRails/app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...post.title ,post_path(post.id));@output_buffer.safe_append='...
+...                              ^
+/vagrant/RubyRails/app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/new" for 10.0.2.2 at 2019-06-18 14:09:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/new" for 10.0.2.2 at 2019-06-18 14:09:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 102ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2019-06-18 14:09:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bVXdxl+ShaV1GeJpEGgOAHTOX65gLYv5d4EQommN/0WcM9BrVCK9XwpQv22nkJL7s48DGw7gTgR5qGzPcTW1xA==", "post"=>{"title"=>"sss", "body"=>"sss", "image"=>"{}"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:7
+  [1m[36mPost Create (6.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "sss"], ["body", "sss"], ["created_at", "2019-06-18 14:09:59.460640"], ["updated_at", "2019-06-18 14:09:59.460640"], ["image_id", nil]]
+  ↳ app/controllers/posts_controller.rb:7
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:7
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 33ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2019-06-18 14:09:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 100ms (Views: 88.3ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/posts/5" for 10.0.2.2 at 2019-06-18 14:10:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fL5/vNKHgVhY0EPvP+SsJClmMBz9ZpONjYjDiP1MHImN2HIR2Te5oieZHuuIHDDf7idsqZOrVnCDob/l5fRWCA==", "id"=>"5"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[36mPost Destroy (11.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 26.1ms)
+
+
+  
+NameError (undefined local variable or method `redirect_to　posts_path' for #<PostsController:0x00007f5744498778>):
+  
+app/controllers/posts_controller.rb:27:in `destroy'
+Started DELETE "/posts/5" for 10.0.2.2 at 2019-06-18 14:10:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fL5/vNKHgVhY0EPvP+SsJClmMBz9ZpONjYjDiP1MHImN2HIR2Te5oieZHuuIHDDf7idsqZOrVnCDob/l5fRWCA==", "id"=>"5"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+Completed 404 Not Found in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=5):
+  
+app/controllers/posts_controller.rb:25:in `destroy'
+Started GET "/posts/mew" for 10.0.2.2 at 2019-06-18 14:10:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"mew"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 404 Not Found in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=mew):
+  
+app/controllers/posts_controller.rb:14:in `show'
+Started GET "/posts/new" for 10.0.2.2 at 2019-06-18 14:10:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 95ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2019-06-18 14:10:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2fhT5TT3W0hOyWlROsVBndHKiRTBKTczdbuwSH9v7gUonl5IP0djsjGANFWNPd1mFovVoa/k8s57kswlZ9ekhA==", "post"=>{"title"=>"sss", "body"=>"sss", "image"=>"{}"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:7
+  [1m[36mPost Create (13.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "sss"], ["body", "sss"], ["created_at", "2019-06-18 14:10:46.435700"], ["updated_at", "2019-06-18 14:10:46.435700"], ["image_id", nil]]
+  ↳ app/controllers/posts_controller.rb:7
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:7
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 47ms (ActiveRecord: 25.6ms)
+
+
+Started GET "/posts/6" for 10.0.2.2 at 2019-06-18 14:10:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 115ms (Views: 98.4ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/posts/6" for 10.0.2.2 at 2019-06-18 14:10:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kM1fpv0UDk89KD7SKkmauyGQfm/hx4PnjU8C9wTv5Alhq1IL9qQ2tUJhY9adsQZA5tEi2o8KRhqDZn6aHFeuiA==", "id"=>"6"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[36mPost Destroy (10.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 19.7ms)
+
+
+  
+NameError (undefined local variable or method `redirect_to　posts_path' for #<PostsController:0x00007f5744532b48>):
+  
+app/controllers/posts_controller.rb:27:in `destroy'
+Started DELETE "/posts/6" for 10.0.2.2 at 2019-06-18 14:11:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kM1fpv0UDk89KD7SKkmauyGQfm/hx4PnjU8C9wTv5Alhq1IL9qQ2tUJhY9adsQZA5tEi2o8KRhqDZn6aHFeuiA==", "id"=>"6"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+Completed 404 Not Found in 22ms (ActiveRecord: 3.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=6):
+  
+app/controllers/posts_controller.rb:25:in `destroy'
+Started GET "/posts/new" for 10.0.2.2 at 2019-06-18 14:11:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 473ms (Views: 442.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2019-06-18 14:11:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FqtTfsH2r0HNh7AOnhDWjpR808hptBCx3L/dgw0b0vPnzV7TykaXu7LO7Qop6Ep1Uz2PfQd51UzSlqHuFaOYcg==", "post"=>{"title"=>"fff", "body"=>"fff", "image"=>"{}"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:7
+  [1m[36mPost Create (5.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "fff"], ["body", "fff"], ["created_at", "2019-06-18 14:11:09.774488"], ["updated_at", "2019-06-18 14:11:09.774488"], ["image_id", nil]]
+  ↳ app/controllers/posts_controller.rb:7
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:7
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 25ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/posts/7" for 10.0.2.2 at 2019-06-18 14:11:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 85ms (Views: 72.8ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/7" for 10.0.2.2 at 2019-06-18 14:11:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zom1isLICpYOmfMSFhTbwuvdJFWZa0CLbnCUEN6CddWX77gnyXgybHHQrhah7Ec5LJx44PemhXZgWeh9xjo/VA==", "id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[36mPost Destroy (3.7ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 20ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/posts" for 10.0.2.2 at 2019-06-18 14:11:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/RubyRails/app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...post.title ,post_path(post.id));@output_buffer.safe_append='...
+...                              ^
+/vagrant/RubyRails/app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/posts/3" for 10.0.2.2 at 2019-06-18 14:14:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+Completed 404 Not Found in 5ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=3):
+  
+app/controllers/posts_controller.rb:14:in `show'
+Started GET "/posts" for 10.0.2.2 at 2019-06-18 14:14:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/RubyRails/app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...post.title ,post_path(post.id));@output_buffer.safe_append='...
+...                              ^
+/vagrant/RubyRails/app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/posts" for 10.0.2.2 at 2019-06-18 20:08:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/RubyRails/app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...post.title ,post_path(post.id));@output_buffer.safe_append='...
+...                              ^
+/vagrant/RubyRails/app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/RubyRails/app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/index.html.erb:4: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/posts/index.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/posts" for 10.0.2.2 at 2019-06-18 20:11:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 645ms (Views: 616.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/attachments/fc8cf0bbd769952322ebe21d3cb11be7aef2c84d/store/fill/100/100/4b07a70bc960bd6044acd2cf01f3ce0b4b4d65468957beb3b2824bf9b9ef/image.jpeg" for 10.0.2.2 at 2019-06-18 20:11:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-06-18 20:11:08 +0000] GET "/fc8cf0bbd769952322ebe21d3cb11be7aef2c84d/store/fill/100/100/4b07a70bc960bd6044acd2cf01f3ce0b4b4d65468957beb3b2824bf9b9ef/image.jpeg" 200 67.9ms
+
+Started GET "/posts/4" for 10.0.2.2 at 2019-06-18 20:11:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 78ms (Views: 53.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/attachments/7ac82130ac4e91a7d80209be9b8e4414290179f2/store/fill/300/300/4b07a70bc960bd6044acd2cf01f3ce0b4b4d65468957beb3b2824bf9b9ef/image.jpeg" for 10.0.2.2 at 2019-06-18 20:11:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2019-06-18 20:11:13 +0000] GET "/7ac82130ac4e91a7d80209be9b8e4414290179f2/store/fill/300/300/4b07a70bc960bd6044acd2cf01f3ce0b4b4d65468957beb3b2824bf9b9ef/image.jpeg" 200 48.9ms
+
+Started DELETE "/posts/4" for 10.0.2.2 at 2019-06-18 20:11:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A9yYbwpxmCI/u75nKOZcVBN3oIKPIueLB7L2lpngm93yupXCAcGg2EDy42OfHsCv1Db8N+HvInYJm4r7gVjRXA==", "id"=>"4"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[36mPost Destroy (2.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[35m (7.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 11.3ms)
+
+
+  
+Errno::ETXTBSY (Text file busy @ apply2files - /vagrant/RubyRails/tmp/uploads/store/4b07a70bc960bd6044acd2cf01f3ce0b4b4d65468957beb3b2824bf9b9ef):
+  
+app/controllers/posts_controller.rb:26:in `destroy'
+Started GET "/posts" for 10.0.2.2 at 2019-06-18 20:11:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 120ms (Views: 107.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2019-06-18 20:11:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 102ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2019-06-18 20:11:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X//iUXhRGvhZkMEQM6U64jtc8/JhYo2TciNPU9ZLuPKume/8c+EiAibZnBSEXaYZ/B2vRw+vSG58CjM+zvPycw==", "post"=>{"title"=>"aaa", "body"=>"aaa", "image"=>"{}"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:7
+  [1m[36mPost Create (4.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "aaa"], ["body", "aaa"], ["created_at", "2019-06-18 20:11:54.484446"], ["updated_at", "2019-06-18 20:11:54.484446"], ["image_id", nil]]
+  ↳ app/controllers/posts_controller.rb:7
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:7
+Redirected to http://localhost:3000/posts/8
+Completed 302 Found in 20ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/posts/8" for 10.0.2.2 at 2019-06-18 20:11:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 61ms (Views: 54.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/posts/8" for 10.0.2.2 at 2019-06-18 20:11:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HC5oX+nibGcj2VLrUO2IPe722e1bnimnDDUXg8ktHVntSGXy4lJUnVyQD+/nFRTGKbeFWDVT7FoCHGvu0ZVX2A==", "id"=>"8"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[36mPost Destroy (5.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 25ms (ActiveRecord: 15.5ms)
+
+
+Started GET "/posts" for 10.0.2.2 at 2019-06-18 20:11:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 65ms (Views: 59.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/4" for 10.0.2.2 at 2019-06-18 20:12:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 84ms (Views: 67.7ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/posts/4" for 10.0.2.2 at 2019-06-18 20:12:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2DkzV2oYT4JcO7/yrkGoEJAcj38kw0twotv/hCmmy8spXz76Yah3eCNy4vYZuTTrV13TykoOjo2s8oPpMR6BSg==", "id"=>"4"}
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[36mPost Destroy (5.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/posts_controller.rb:26
+  [1m[35m (11.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/posts_controller.rb:26
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 18.5ms)
+
+
+  
+Errno::ETXTBSY (Text file busy @ apply2files - /vagrant/RubyRails/tmp/uploads/store/4b07a70bc960bd6044acd2cf01f3ce0b4b4d65468957beb3b2824bf9b9ef):
+  
+app/controllers/posts_controller.rb:26:in `destroy'
